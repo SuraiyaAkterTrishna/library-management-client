@@ -5,7 +5,7 @@ import { useEffect } from "react";
 const Categories = () => {
   const [categories, setCategories] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:5000/category')
+    fetch('https://library-management-server-one.vercel.app/category')
     .then(res => res.json())
     .then(data => setCategories(data))
   }, []);

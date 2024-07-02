@@ -24,13 +24,13 @@ const router = createBrowserRouter([
       {
         path: "/category/:category",
         element: <Category></Category>,
-        loader: () => fetch(`http://localhost:5000/books`),
+        loader: () => fetch(`https://library-management-server-one.vercel.app/books`),
       },
       {
         path: "/:category/:categoryId",
         element: <BookDetails></BookDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/books/${params.categoryId}`),
+          fetch(`https://library-management-server-one.vercel.app/books/${params.categoryId}`),
       },
       {
         path: "/add-book",
@@ -40,12 +40,12 @@ const router = createBrowserRouter([
         path: "/update-book/:id",
         element: <UpdateBook></UpdateBook>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/books/${params.id}`),
+          fetch(`https://library-management-server-one.vercel.app/books/${params.id}`),
       },
       {
         path: "/all-books",
         element: <AllBooks></AllBooks>,
-        loader: () => fetch("http://localhost:5000/books"),
+        loader: () => fetch("https://library-management-server-one.vercel.app/books"),
       },
       {
         path: "/borrowed-books",
